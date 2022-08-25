@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Tracking-Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="grid">
+
+        <section class="card-container container">
+            <div class="card">
+                <img src="/images/image-jeremy.png" class="img" alt="">
+                <div>
+                    <p>Report for</p>
+                    <h1>Jeremy <br> Robson</h1>
+                </p>
+            </div>
+            </div>
+            <div class="drop-down">
+                <p id="daily" onclick="gettime()">Daily</p>
+                <p id="weekly">Weekly</p>
+                <p id="monthly">Monthly</p>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <section class="work-container work">
+            <div class="hero">
+                <div class="icon">
+                    <h2>work <span><img src="/images/icon-ellipsis.svg" class="small-options"> </span> </h2>
+
+                </div>
+                <p class="hours">32hrs</p>
+                <p class="hi">last week- 36hrs</p>
+            </div>
+        </section>
+        <br>
+        <section class="work-container play">
+            <div class="hero">
+                <div class="icon">
+                    <h2>play <span ><img src="/images/icon-ellipsis.svg" class="small-options"> </span></h2>
+                </div>
+                <p class="hours">10hrs</p>
+                <p>last week- 8hrs</p>
+            </div>
+        </section>
+        <br>
+        <section class="work-container study">
+            
+            <div class="hero">
+                <div class="icon">
+                    <h2 class="boxs">study<span><img src="/images/icon-ellipsis.svg" class="small-options"> </span></h2>
+
+                </div>
+                <p class="hours">4hrs</p>
+                <p>last week- 7hrs</p>
+            </div>
+        </section>
+        <br>
+        <section class="work-container exercise">
+            <div class="hero">
+                <div class="icon">
+                    <h2 class="boxs">exercise<span ><img src="/images/icon-ellipsis.svg" class="options"> </span> </h2>
+
+                </div>
+                <p class="hours">4hrs</p>
+                <p>last week- 5hrs</p>
+            </div>
+        </section>
+        <br>
+        <section class="work-container social">
+            <div class="hero">
+                <div class="icon">
+                    <h2 class="boxs">social<span><img src="/images/icon-ellipsis.svg" class="small-options"> </span> </h2>
+
+                </div>
+                <p class="hours">5hrs</p>
+                <p>last week- 10hrs</p>
+            </div>
+        </section>
+        <br>
+        <section class="work-container self-care">
+            <div class="hero">
+                <div class="icon ">
+                    <h2 class="boxs">self-care<span><img src="/images/icon-ellipsis.svg" class="options"> </span></h2>
+                </div>
+                <p class="hours">2hrs</p>
+                <p>last week- 2hrs</p>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
