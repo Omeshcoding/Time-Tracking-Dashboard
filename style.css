@@ -44,11 +44,11 @@
 }
 
 body{
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Rubik,sans-serif;
-  background: #1c1f4a;
+  background: var(--Primary-blue-400);
 }
 /* Utility */
 h1,
@@ -60,57 +60,49 @@ p{
 .br-radius{
   border-radius: 20px;
 }
+.p-text{
+  text-transform: capitalize;
+  color: var(--Primary-blue-100) ;
+  opacity: .7;
+  font-weight: 100;  
+}
+
 /* Container */
 .container{
-  /* margin: 1%; */
-  display: grid;
-    display: grid;
-      grid-template-columns: 300px;
-      grid-template-rows: 10px auto 20px;
-      grid-template-areas:
-        "a a b c d"
-        "a a b c d"
-        "a a e f g"
-        "a a e f g";
-      grid-gap: 5px;
-  /* height:600px; */
+  display: flex;
+  flex-direction: column;
   width: 100%;
-justify-content: space-evenly;
-  align-items: start;
-  /* justify-items: center; */
-  /* padding:2rem; */
-  height: 100vh;
-  background-color: #fff;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #fff; */
+  
 }
 
 
 /* large-container */
 .large-cards{
   grid-area: a;
+  order: 1;
   color:#fff;
   border-radius: 20px;
-  width:300px;
-  height:640px;
-  margin: 1.5rem 1.5rem 0 1.5rem ;
+  width:30%;
+  margin: 1rem 1.5rem 0 ;
   background-color: var(--Primary-blue-300);
 }
 .lg-card{
   background-color: var(--Blue);
-  padding:4.5rem 2rem;
-  height:300px;
-  border-radius:20px;
+  padding: 1.1rem 2rem 6rem 2rem;
+  height: 49%;
+  border-radius: 20px;
 }
-.title{
-  margin:40px 0;
-}
-.title h1{
+.flex h1{
   font-size: 40px;
 }
 .lg-card img{
-  width:50%;
-  margin-bottom:2rem;
+  width: 50%;
+  margin-bottom: 2rem;
   border: 5px solid #fff;
-  border-radius:50%;
+  border-radius: 50%;
 }
 .lg-card-content{
   padding: 2rem;
@@ -118,71 +110,164 @@ justify-content: space-evenly;
 }
 .lg-card-content p{
   margin-top: 0;
-  padding:.3rem;
+ 
+  padding: .7rem;
+  color: var(--Primary-blue-100);
+}
+.lg-card-content p:hover{
+    color: var(--white);
 }
 /* Small Cards */
 .small-cards{
-  margin-top:1.5rem;
+  margin: 1.5rem 0 2rem;
 }
 
 .sm-card{
   background-color: var(--Primary-blue-300);
-  padding:2rem;
-  margin:3rem 0 0 0  ;
+  padding: 1.8rem;
+  margin: 3rem 0  0  ;
   color:#fff;
 }
 
 .sm-card .icon h2{
-  font-size: 40px;
+  font-size: 20px;
   text-transform: capitalize;
-  font-Weight:300;
+  font-weight: 300;
+  margin: 0 0 2rem  0;
+}
+.sm-card  .hours {
+ font-size: 3.2rem;
+ margin-bottom: 1.2rem;
+ font-weight: 100;
+}
+
+.icon .option-icon{
+  background-image: url(./images/icon-ellipsis.svg);
+  background-repeat: no-repeat;
+  color:none;
+  background-position: top .5rem  right 10%;
 }
 
 .background-card{
-  width:300px;
+  width: 90%;
 }
 
 
 .work {
   grid-area: b;
+  order: 2;
   background: var(--Light-red);
   background-image: url(/images/icon-work.svg);
   background-repeat: no-repeat;
-  /* background-position: right; */
-  
+  background-position: top  right 10% ;
+  border-radius: 30px;
 }
-
+.small-cards :hover {
+  background-color: #41467b ;
+ /* opacity:.8; */
+}
 .play {
-  grid-area: c;  
+  grid-area: c;
+  order: 3;
   background: var(--Soft-blue);
   background-image: url(/images/icon-play.svg);
   background-repeat: no-repeat;
+  background-position: top right 10%;
+  border-radius: 30px;
 }
 
 .study {
   grid-area: d;
+  order: 4;
   background: var(--Dark-red);
   background-image: url(/images/icon-study.svg);
   background-repeat: no-repeat;
+  background-position: top right 10%;
+  border-radius: 30px;
 }
 
 .exercise {
   grid-area: e;
+  order: 5;
   background: var(--Lime-green);
   background-image: url(/images/icon-exercise.svg);
   background-repeat: no-repeat;
+  background-position: top right 10%;
+  border-radius: 30px;
 }
 
 .social {
   grid-area: f;
+  order: 6;
   background: var(--Violet);
   background-image: url(/images/icon-social.svg);
   background-repeat: no-repeat;
+  background-position: top right 10%;
+  border-radius: 30px;
 }
 
 .self-care {
   grid-area: g;
+  order: 7;
   background: var(--Soft-Orange);
   background-image: url(/images/icon-self-care.svg);
   background-repeat: no-repeat;
+  background-position: top right 10%;
+  border-radius: 30px;
+}
+@media screen and (min-width: 989px) {
+  .container{
+    display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "a  b c d"
+        "a  e f g";
+  }
+  .large-cards{
+    width: 23vw;
+    height: 90%;
+    margin-top:-.4rem;
+  }
+  .lg-card-content p{
+      font-size: 18px;
+    }
+}
+@media screen and (max-width: 989px){
+  .flex{
+    display: flex;
+  }
+  .flex .title{
+    margin-top: 1rem;
+  }
+  .flex h1{
+    font-size: 20px;
+    font-weight: 100;
+ 
+  }
+  .flex p{
+    font-size: 10px ;
+  }
+  
+  .large-cards{
+    width: 90%;
+    height: 1%;
+  }
+  .lg-card{
+    height: 1vh;
+    margin-top: 0 ;
+  }
+    .lg-card .img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.2rem;
+    object-fit: cover;
+    }
+    .lg-card-content {
+    display: flex;
+    justify-content:space-between;
+    margin:0 3rem;
+  }
+  .lg-card-content p{
+      font-size: 20px;
+    }
 }
