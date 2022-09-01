@@ -106,7 +106,6 @@ p{
 }
 .lg-card-content{
   padding: 2rem 2rem 2rem 0;
- 
 }
 .lg-card-content p{
   margin-top: 0;
@@ -237,14 +236,20 @@ p{
     background-color: #fff;
 
       grid-template-columns: repeat(4, 1fr);
+      
       grid-template-areas:
         "a  b c d"
         "a  e f g";
+        place-items: center;
   }
   .large-cards{
     width: 23vw;
     height: 90%;
     margin-top:-.4rem;
+  }
+    
+  .lg-card-content{
+    padding: 2rem;
   }
   .lg-card-content p{
       font-size: 18px;
