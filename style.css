@@ -110,12 +110,16 @@ p{
 }
 .lg-card-content p{
   margin-top: 0;
- 
+  cursor: pointer;
   padding: .7rem;
   color: var(--Primary-blue-100);
 }
 .lg-card-content p:hover{
+  color:#fff;
+}
+.lg-card-content p:active{
     color: var(--white);
+    transform:scaleY(1.2);
 }
 /* Small Cards */
 .small-cards{
@@ -138,7 +142,16 @@ p{
 .sm-card  .hours {
  font-size: 3.2rem;
  margin-bottom: 1.2rem;
+ 
  font-weight: 100;
+}
+.small-cards :hover {
+  background-color: #41467b ;
+  transition:cubic-bezier(1.2, -0.28, 0.735, 0.045)s;
+ cursor:pointer;
+}
+.sm-card p {
+  width: 90%;
 }
 
 .icon .option-icon{
@@ -161,10 +174,6 @@ p{
   background-repeat: no-repeat;
   background-position: top  right 10% ;
   border-radius: 30px;
-}
-.small-cards :hover {
-  background-color: #41467b ;
- /* opacity:.8; */
 }
 .play {
   grid-area: c;

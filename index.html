@@ -18,14 +18,14 @@
                     <img src="/images/image-jeremy.png" class="img" alt="">
                     <div class="title">
                         <p class='p-text'>Report for</p>
-                        <h1>Jeremy Robson</h1>
+                        <h1 id="title">Jeremy Robson</h1>
                     </div>
                 </div>
             </div>
             <div class="lg-card-content br-radius flex p-text">
-                <p id="daily" onclick="gettime()">Daily</p>
-                <p id="weekly">Weekly</p>
-                <p id="monthly">Monthly</p>
+                <p id="daily" class="timeline">daily</p>
+                <p id="weekly" class="timeline">weekly</p>
+                <p id="monthly" class="timeline">monthly</p>
             </div>
         </section>
 
@@ -33,67 +33,71 @@
         <section class="small-cards work background-card br-radius">
             <div class="sm-card br-radius">
                 <div class="icon">
-                    <h2 class="option-icon">Work</h2>
+                    <h2  class="option-icon" id="work">Work</h2>
 
                 </div>
                 <p class="hours">32hrs</p>
-                <p class="p-text">last week- 36hrs</p>
+                <p class="p-text">last week-<span class="previous">36hrs</span></p>
             </div>
         </section>
         
         <section class="small-cards play background-card br-radius">
             <div class="sm-card br-radius">
                 <div class="icon">
-                    <h2 class="option-icon">play</h2>
+                    <h2 class="option-icon">Play</h2>
                 </div>
                 <p class="hours">10hrs</p>
-                <p class="p-text">last week- 8hrs</p>
+                <p class="p-text">last week-<span class="previous">8hrs</span></p>
             </div>
         </section>
         
         <section class="small-cards study background-card  br-radius">
             <div class="sm-card br-radius">
                 <div class="icon">
-                    <h2 class="option-icon">study</h2>
+                    <h2 class="option-icon">Study</h2>
 
                 </div>
                 <p class="hours">4hrs</p>
-                <p class="p-text">last week- 7hrs</p>
+                <p class="p-text">last week-<span class="previous">7hrs</span></p>
             </div>
         </section>
         
         <section class="small-cards exercise background-card br-radius">
             <div class="sm-card br-radius">
                 <div class="icon">
-                    <h2 class="option-icon">exercise</h2>
+                    <h2 class="option-icon">Exercise</h2>
 
                 </div>
                 <p class="hours">4hrs</p>
-                <p class="p-text">last week- 5hrs</p>
+                <p class="p-text">last week-<span class="previous">5hrs</span></p>
             </div>
         </section>
         
         <section class="small-cards social background-card br-radius">
             <div class="sm-card br-radius">
                 <div class="icon">
-                    <h2  class="option-icon">social</h2>
+                    <h2  class="option-icon">Social</h2>
 
                 </div>
                 <p class="hours">5hrs</p>
-                <p class="p-text">last week- 10hrs</p>
+                <p class="p-text">last week-<span class="previous">10hrs</span> </p>
             </div>
         </section>
         
         <section class="small-cards self-care background-card br-radius">
             <div class="sm-card br-radius">
                 <div class="icon ">
-                    <h2 class="option-icon">self-care</h2>
+                    <h2 class="option-icon">Self Care</h2>
                 </div>
                 <p class="hours">2hrs</p>
-                <p class="p-text">last week- 2hrs</p>
+                <p class="p-text">last week- <span class="previous">2hrs</span></p>
             </div>
         </section>
     </div>
+   <!-- <script type="module">
+    import data from "./data.json";
+    console.log(data);
+</script> -->
     <script src="app.js"></script>
 </body>
 

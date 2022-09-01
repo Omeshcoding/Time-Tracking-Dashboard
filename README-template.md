@@ -1,24 +1,30 @@
 # Frontend Mentor - Time tracking dashboard solution
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+- [Links](#links)
+- [Author](#author)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+### Links
 
-## Overview
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://omeshcoding.github.io/Time-Tracking-Dashboard/)
+
+## Author
+
+- Website - [Umesh Sharma](https://www.your-site.com)
+- Frontend Mentor - [@Omeshcoding](https://www.frontendmentor.io/profile/Omeshcoding)
+- Twitter - [@Omesh_Sharma](https://twitter.com/Omesha_Sh)
 
 ### The challenge
 
@@ -30,28 +36,25 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+![](./screenshot/Desktop%20Time-Tracking-Dashboard.png)
+![](./screenshot/Mobile%20Time-Tracking-Dashboard.png)
 
 ## My process
-I believe in the concept of divide and rule.
-1) I set up the Html sections of the project .
-2) Now while coding CSS I had to build 7 components so I start with 1 main component  and as other six componets are the same I created one of those. After competing one it was easier to make other 5  as they had the same styling.
-3) then I build desKtop first using grid , 
-after completing it I switched the destop first to mobile, this approach helped me to write less code. 
-4) I built the mobile reposniveness using Flex-box;
+
+-HTML
+
+1. I set up the Html sections of the project .
+
+- CSS
+
+2. Now while coding CSS I had to build 7 components so I start with 1 main component and as other six componets are the same I created one of those. After competing one it was easier to make other 5 as they had the same styling.
+3. then I build desKtop first using grid ,
+   after completing it I switched the destop first to mobile, this approach helped me to write less code.
+4. I built the mobile reposniveness using Flex-box;
+
+- javaScript
+
+5. I fetched the data from the json file using the fetch method inside async function.
 
 ### Built with
 
@@ -60,75 +63,54 @@ after completing it I switched the destop first to mobile, this approach helped 
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-1 ) How to use grid area to make the layout of the dashboard.
-2 ) How to position an image at any position of the container using background-position.
-
-To see how you can add code snippets, see below:
+1. How to use grid area to make the layout of the dashboard.
+2. How to position an image at any position of the container using background-position.
+3. How to get data from a local JSON object, method like fetch and how to use async functions check for errors if any.
+   To see how you can add code snippets, see below:
 
 ```html
 <div class="icon">
-       <h2 class="option-icon">Work</h2>
-  </div>
+  <h2 class="option-icon">Work</h2>
+</div>
 ```
+
 ```css
-.container{
-    display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas:
-        "a  b c d"
-        "a  e f g";
-  }
-  .icon .option-icon{
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'a  b c d'
+    'a  e f g';
+}
+.icon .option-icon {
   background-image: url(./images/icon-ellipsis.svg);
   background-repeat: no-repeat;
-  color:none;
-  background-position: top .5rem  right 10%;
+  color: none;
+  background-position: top 0.5rem right 10%;
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+async function getTime() {
+  const response = await fetch('./data.json');
+  const dataArray = await response.json();
+  return dataArray;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
+
 I would to focus on the css grid and it's properties as it has many in future more as it can make good layouts.
-
-<!-- Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect. -->
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I would focus on async function and dealing more with JSON objects using api's.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Umesh Sharma](https://www.your-site.com)
-- Frontend Mentor - [@Omeshcoding](https://www.frontendmentor.io/profile/Omeshcoding)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@4002-Nonye](https://www.frontendmentor.io/profile/4002-Nonye)
+  His javaScript code gave me an idea of how to fetch data from local Json object.
