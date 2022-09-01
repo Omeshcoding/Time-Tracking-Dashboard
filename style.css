@@ -105,7 +105,7 @@ p{
   border-radius: 50%;
 }
 .lg-card-content{
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
  
 }
 .lg-card-content p{
@@ -170,7 +170,7 @@ p{
   grid-area: b;
   order: 2;
   background: var(--Light-red);
-  background-image: url(/images/icon-work.svg);
+  background-image: url(./images/icon-work.svg);
   background-repeat: no-repeat;
   background-position: top  right 10% ;
   border-radius: 30px;
@@ -179,7 +179,7 @@ p{
   grid-area: c;
   order: 3;
   background: var(--Soft-blue);
-  background-image: url(/images/icon-play.svg);
+  background-image: url(./images/icon-play.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
   border-radius: 30px;
@@ -189,7 +189,7 @@ p{
   grid-area: d;
   order: 4;
   background: var(--Dark-red);
-  background-image: url(/images/icon-study.svg);
+  background-image: url(./images/icon-study.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
   border-radius: 30px;
@@ -199,7 +199,7 @@ p{
   grid-area: e;
   order: 5;
   background: var(--Lime-green);
-  background-image: url(/images/icon-exercise.svg);
+  background-image: url(./images/icon-exercise.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
   border-radius: 30px;
@@ -209,7 +209,7 @@ p{
   grid-area: f;
   order: 6;
   background: var(--Violet);
-  background-image: url(/images/icon-social.svg);
+  background-image: url(./images/icon-social.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
   border-radius: 30px;
@@ -219,14 +219,23 @@ p{
   grid-area: g;
   order: 7;
   background: var(--Soft-Orange);
-  background-image: url(/images/icon-self-care.svg);
+  background-image: url(./images/icon-self-care.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
   border-radius: 30px;
 }
 @media screen and (min-width: 989px) {
-  .container{
-    display: grid;
+  main{
+      display: grid;
+      place-items: center;
+      /* width: 80%; */
+      margin:50px 100px;
+      
+    }
+    .container{
+      display: grid;
+    background-color: #fff;
+
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas:
         "a  b c d"
